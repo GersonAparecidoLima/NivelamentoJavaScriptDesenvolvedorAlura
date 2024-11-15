@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #F55B64;
+    --cor-secundaria: #C2373F;
+    --neutro: #F9F9F9;
+    --preto: #131730;
+    --fonte-titulo: "Krona One", sans-serif;
+    --fonte-texto: 'Numans', sans-serif;
+    --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
+}
+
+body {
+    background: var(--degrade-azul);
+    /*degrader na cor azul*/
+    background-repeat: no-repeat;
+    /*o degrader vai apresentar apenas uma vez*/
+    height: 100vh;
+    /*O degrader vai ficar 100 do monitor utilizado vh*/
+
+    /*alinhando ao centro o conteudo*/
+    display: flex;
+    /*Tranformamos o body em um conteiner flexivel, com isto os elementos ficam em linha um do lado do outro*/
+    flex-direction: column;
+    /*aqui vai manter os elementos um em baixo do outro como coluna*/
+    align-items: center;
+    /*aqui faz a centralização deste elemento filho dentro deste conteiner flexivel*/
+    
+}
+
+/**/
+
+
+main {
+    margin-top: 64px;
+    /*Inicializando uma margem top de 64 pix para afastar um pouco da tela */
+
+    display: flex;
+    /*Tansformamos o conteiner em um conteine flexivel*/
+    flex-direction: column;
+    /*aqui vai manter os elementos um em baixo do outro como coluna*/
+
+    gap: 24px;
+    /*realiza espaçamento entre todos os elementos filhos que 
+    seja conteine ou que esteje fora de conteiner*/
+
+    width: 440px;
+    /*Largura do conteiner com de 440px*/
+    align-items: center;
+    /*Alinha os itens ao centro*/
+
+    background-color: var(--neutro);
+    /*colocar o background como neutro*/
+    padding: 56px;
+    border-radius: 16px;
+    /*Borda aredonda*/
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
+}
+
+hr {
+    border: none;
+    /*removenda as bordas*/
+    border-bottom: 3px dotted var(--cor-primaria);
+    /*Borda somente em baixo para ele ficar pontilhada*/
+    margin-bottom: 24px;
+    /*para fazer um espaçamento entre o conteudo e conteudo da lista*/
+    width: 100%;
+    /*Colocar a largura como de 100*/
+
+}
+
+p {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 24px;
+    line-height: 24px;
+    text-align: left;
+}
+
+#item-input {
+    padding: 12px 16px;
+    /*espaçamento interno de 12 px em cima em baixo, 16 pix ao lados*/
+    display: block;
+    /*dericion o botão para baixo do campo de digitação*/
+    border-radius: 24px;
+    /*aredondamento da borda   */
+    border: 1px solid var(--preto);
+    /*uma borda de 1 px sendo ela solida ou seja não pontinhada com cor preta*/
+    width: 307px;
+    /*Largura expecifica para este campo de digitação*/
+}
+
+#item-input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#adicionar-botao {
+    text-align: center;
+    /*alinhamos o texto ao centro*/
+    padding: 12px 16px;
+    /*espaçamento interno de 12 px em cima em baixo, 16 pix ao lados*/
+    border-radius: 24px;
+    /*aredondamento da borda*/
+    background-color: var(--cor-primaria);
+    /*Colocamos um cor no fundo que e primaria*/
+    color: var(--neutro);
+    /*cor na fonte sendo branco*/
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+}
+
+form {
+    display: flex;
+    /*Tansformamos o conteiner em um conteine flexivel*/
+    flex-direction: column;
+    /*aqui vai manter os elementos um em baixo do outro como coluna*/
+    align-items: center;
+    /*alinha os itens ao centro*/
+    gap: 8px;
+    /*realiza espaçamento entre todos os elementos filhos que 
+    seja conteine ou que esteje fora de conteiner*/
+}
+
+.item-lista-container {
+    display: flex;
+    /*Tansformamos o conteiner em um conteine flexivel*/
+    align-items: center;
+    /*Alinhamos os itens ao centro*/
+    justify-content: space-between;
+    /*faz o primeiro conteine ficar total esquerda e o segundo total a direita*/
+}
+
+.container-nome-compra {
+    display: flex;
+    /*Tansformamos o conteiner em um conteine flexivel*/
+}
+
+ul {
+    list-style-type: none;
+    /*retira aquela bolinha que fica antes do item da lista */
+    width: 100%;
+}
+
+.item-lista-texto {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-customizado {
+    width: 20px;
+    height: 20px;
+    background-color: var(--neutro);
+    border: 1px solid var(--preto);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.checked {
+    background-color: var(--preto);
+    position: relative;
+}
+
+.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -10%;
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
+    transform: rotate(-140deg);
+}
+
+.botao-acao {
+    background-color: transparent;
+    border: none;
+}
+
+.checkbox-container {
+    display: inline;
+}
